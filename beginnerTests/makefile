@@ -1,7 +1,13 @@
 # Makefile for beginnerTests
+
+# Compilers to be used
 COMP_S = gfortran # serial compiler
 COMP_P = mpifort # parallel compiler
-#OPT_P = 
+ifdef CHEY
+ COMP_P = ifort
+endif
+
+# Executables created 
 PROGS = area mpiHello mpiHelloB mpiHelloN
 
 .PHONY: all clean cleanall cleanhello cleanallhello
@@ -34,10 +40,10 @@ mpi_HelloNsend.o: mpi_HelloNsend.f90
 
 clean:
 	rm *.o 
-	rm *.mod
+#	rm *.mod
 
 cleanall:
 	rm $(PROGS)
 	rm *.o
-	rm *.mod
+#	rm *.mod
 	
