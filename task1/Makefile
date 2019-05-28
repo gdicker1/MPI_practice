@@ -1,4 +1,4 @@
-# mk_task1
+# Makefile
 #  Makefile for MPI_practice task1 - Create and parallelize DAXPY code
 OBJ = task1.o task1_m.o
 COMP = gfortran
