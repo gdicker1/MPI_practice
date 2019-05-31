@@ -1,0 +1,1151 @@
+    269605:	find library=libc.so.6 [0]; searching
+    269605:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64:/glade/work/gdicker/opt/openmpi314/lib/tls:/glade/work/gdicker/opt/openmpi314/lib/x86_64:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib/tls/x86_64:/glade/work/gdicker/opt/lib/tls:/glade/work/gdicker/opt/lib/x86_64:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269605:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64/libc.so.6
+    269605:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/libc.so.6
+    269605:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64/libc.so.6
+    269605:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libc.so.6
+    269605:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64/libc.so.6
+    269605:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/libc.so.6
+    269605:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/x86_64/libc.so.6
+    269605:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libc.so.6
+    269605:	  trying file=/glade/work/gdicker/opt/lib/tls/x86_64/libc.so.6
+    269605:	  trying file=/glade/work/gdicker/opt/lib/tls/libc.so.6
+    269605:	  trying file=/glade/work/gdicker/opt/lib/x86_64/libc.so.6
+    269605:	  trying file=/glade/work/gdicker/opt/lib/libc.so.6
+    269605:	  trying file=tls/x86_64/libc.so.6
+    269605:	  trying file=tls/libc.so.6
+    269605:	  trying file=x86_64/libc.so.6
+    269605:	  trying file=libc.so.6
+    269605:	 search cache=/etc/ld.so.cache
+    269605:	  trying file=/lib64/libc.so.6
+    269605:	
+    269605:	
+    269605:	calling init: /lib64/libc.so.6
+    269605:	
+    269605:	
+    269605:	initialize program: make
+    269605:	
+    269605:	
+    269605:	transferring control: make
+    269605:	
+gfortran -c task2_m.f90 -I/usr/include  -llapack -lblas
+    269607:	find library=libm.so.6 [0]; searching
+    269607:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64:/glade/work/gdicker/opt/openmpi314/lib/tls:/glade/work/gdicker/opt/openmpi314/lib/x86_64:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib/tls/x86_64:/glade/work/gdicker/opt/lib/tls:/glade/work/gdicker/opt/lib/x86_64:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269607:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64/libm.so.6
+    269607:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/libm.so.6
+    269607:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64/libm.so.6
+    269607:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libm.so.6
+    269607:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64/libm.so.6
+    269607:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/libm.so.6
+    269607:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/x86_64/libm.so.6
+    269607:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libm.so.6
+    269607:	  trying file=/glade/work/gdicker/opt/lib/tls/x86_64/libm.so.6
+    269607:	  trying file=/glade/work/gdicker/opt/lib/tls/libm.so.6
+    269607:	  trying file=/glade/work/gdicker/opt/lib/x86_64/libm.so.6
+    269607:	  trying file=/glade/work/gdicker/opt/lib/libm.so.6
+    269607:	  trying file=tls/x86_64/libm.so.6
+    269607:	  trying file=tls/libm.so.6
+    269607:	  trying file=x86_64/libm.so.6
+    269607:	  trying file=libm.so.6
+    269607:	 search cache=/etc/ld.so.cache
+    269607:	  trying file=/lib64/libm.so.6
+    269607:	
+    269607:	find library=libc.so.6 [0]; searching
+    269607:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269607:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libc.so.6
+    269607:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libc.so.6
+    269607:	  trying file=/glade/work/gdicker/opt/lib/libc.so.6
+    269607:	  trying file=tls/x86_64/libc.so.6
+    269607:	  trying file=tls/libc.so.6
+    269607:	  trying file=x86_64/libc.so.6
+    269607:	  trying file=libc.so.6
+    269607:	 search cache=/etc/ld.so.cache
+    269607:	  trying file=/lib64/libc.so.6
+    269607:	
+    269607:	
+    269607:	calling init: /lib64/libc.so.6
+    269607:	
+    269607:	
+    269607:	calling init: /lib64/libm.so.6
+    269607:	
+    269607:	
+    269607:	initialize program: gfortran
+    269607:	
+    269607:	
+    269607:	transferring control: gfortran
+    269607:	
+    269608:	find library=libdl.so.2 [0]; searching
+    269608:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64:/glade/work/gdicker/opt/openmpi314/lib/tls:/glade/work/gdicker/opt/openmpi314/lib/x86_64:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib/tls/x86_64:/glade/work/gdicker/opt/lib/tls:/glade/work/gdicker/opt/lib/x86_64:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269608:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64/libdl.so.2
+    269608:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/libdl.so.2
+    269608:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64/libdl.so.2
+    269608:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libdl.so.2
+    269608:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64/libdl.so.2
+    269608:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/libdl.so.2
+    269608:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/x86_64/libdl.so.2
+    269608:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libdl.so.2
+    269608:	  trying file=/glade/work/gdicker/opt/lib/tls/x86_64/libdl.so.2
+    269608:	  trying file=/glade/work/gdicker/opt/lib/tls/libdl.so.2
+    269608:	  trying file=/glade/work/gdicker/opt/lib/x86_64/libdl.so.2
+    269608:	  trying file=/glade/work/gdicker/opt/lib/libdl.so.2
+    269608:	  trying file=tls/x86_64/libdl.so.2
+    269608:	  trying file=tls/libdl.so.2
+    269608:	  trying file=x86_64/libdl.so.2
+    269608:	  trying file=libdl.so.2
+    269608:	 search cache=/etc/ld.so.cache
+    269608:	  trying file=/lib64/libdl.so.2
+    269608:	
+    269608:	find library=libmpc.so.3 [0]; searching
+    269608:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269608:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libmpc.so.3
+    269608:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libmpc.so.3
+    269608:	  trying file=/glade/work/gdicker/opt/lib/libmpc.so.3
+    269608:	  trying file=tls/x86_64/libmpc.so.3
+    269608:	  trying file=tls/libmpc.so.3
+    269608:	  trying file=x86_64/libmpc.so.3
+    269608:	  trying file=libmpc.so.3
+    269608:	 search cache=/etc/ld.so.cache
+    269608:	  trying file=/lib64/libmpc.so.3
+    269608:	
+    269608:	find library=libmpfr.so.4 [0]; searching
+    269608:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269608:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libmpfr.so.4
+    269608:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libmpfr.so.4
+    269608:	  trying file=/glade/work/gdicker/opt/lib/libmpfr.so.4
+    269608:	  trying file=tls/x86_64/libmpfr.so.4
+    269608:	  trying file=tls/libmpfr.so.4
+    269608:	  trying file=x86_64/libmpfr.so.4
+    269608:	  trying file=libmpfr.so.4
+    269608:	 search cache=/etc/ld.so.cache
+    269608:	  trying file=/lib64/libmpfr.so.4
+    269608:	
+    269608:	find library=libgmp.so.10 [0]; searching
+    269608:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269608:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libgmp.so.10
+    269608:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libgmp.so.10
+    269608:	  trying file=/glade/work/gdicker/opt/lib/libgmp.so.10
+    269608:	  trying file=tls/x86_64/libgmp.so.10
+    269608:	  trying file=tls/libgmp.so.10
+    269608:	  trying file=x86_64/libgmp.so.10
+    269608:	  trying file=libgmp.so.10
+    269608:	 search cache=/etc/ld.so.cache
+    269608:	  trying file=/lib64/libgmp.so.10
+    269608:	
+    269608:	find library=libz.so.1 [0]; searching
+    269608:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269608:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libz.so.1
+    269608:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libz.so.1
+    269608:	  trying file=/glade/work/gdicker/opt/lib/libz.so.1
+    269608:	  trying file=tls/x86_64/libz.so.1
+    269608:	  trying file=tls/libz.so.1
+    269608:	  trying file=x86_64/libz.so.1
+    269608:	  trying file=libz.so.1
+    269608:	 search cache=/etc/ld.so.cache
+    269608:	  trying file=/lib64/libz.so.1
+    269608:	
+    269608:	find library=libm.so.6 [0]; searching
+    269608:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269608:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libm.so.6
+    269608:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libm.so.6
+    269608:	  trying file=/glade/work/gdicker/opt/lib/libm.so.6
+    269608:	  trying file=tls/x86_64/libm.so.6
+    269608:	  trying file=tls/libm.so.6
+    269608:	  trying file=x86_64/libm.so.6
+    269608:	  trying file=libm.so.6
+    269608:	 search cache=/etc/ld.so.cache
+    269608:	  trying file=/lib64/libm.so.6
+    269608:	
+    269608:	find library=libc.so.6 [0]; searching
+    269608:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269608:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libc.so.6
+    269608:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libc.so.6
+    269608:	  trying file=/glade/work/gdicker/opt/lib/libc.so.6
+    269608:	  trying file=tls/x86_64/libc.so.6
+    269608:	  trying file=tls/libc.so.6
+    269608:	  trying file=x86_64/libc.so.6
+    269608:	  trying file=libc.so.6
+    269608:	 search cache=/etc/ld.so.cache
+    269608:	  trying file=/lib64/libc.so.6
+    269608:	
+    269608:	
+    269608:	calling init: /lib64/libc.so.6
+    269608:	
+    269608:	
+    269608:	calling init: /lib64/libm.so.6
+    269608:	
+    269608:	
+    269608:	calling init: /lib64/libz.so.1
+    269608:	
+    269608:	
+    269608:	calling init: /lib64/libgmp.so.10
+    269608:	
+    269608:	
+    269608:	calling init: /lib64/libmpfr.so.4
+    269608:	
+    269608:	
+    269608:	calling init: /lib64/libmpc.so.3
+    269608:	
+    269608:	
+    269608:	calling init: /lib64/libdl.so.2
+    269608:	
+    269608:	
+    269608:	initialize program: /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/f951
+    269608:	
+    269608:	
+    269608:	transferring control: /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/f951
+    269608:	
+    269608:	
+    269608:	calling fini: /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/f951 [0]
+    269608:	
+    269608:	
+    269608:	calling fini: /lib64/libdl.so.2 [0]
+    269608:	
+    269608:	
+    269608:	calling fini: /lib64/libmpc.so.3 [0]
+    269608:	
+    269608:	
+    269608:	calling fini: /lib64/libmpfr.so.4 [0]
+    269608:	
+    269608:	
+    269608:	calling fini: /lib64/libgmp.so.10 [0]
+    269608:	
+    269608:	
+    269608:	calling fini: /lib64/libz.so.1 [0]
+    269608:	
+    269608:	
+    269608:	calling fini: /lib64/libm.so.6 [0]
+    269608:	
+    269609:	find library=libopcodes-2.25.1-32.base.el7_4.2.so [0]; searching
+    269609:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64:/glade/work/gdicker/opt/openmpi314/lib/tls:/glade/work/gdicker/opt/openmpi314/lib/x86_64:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib/tls/x86_64:/glade/work/gdicker/opt/lib/tls:/glade/work/gdicker/opt/lib/x86_64:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269609:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=/glade/work/gdicker/opt/lib/tls/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=/glade/work/gdicker/opt/lib/tls/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=/glade/work/gdicker/opt/lib/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=/glade/work/gdicker/opt/lib/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=tls/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=tls/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	 search cache=/etc/ld.so.cache
+    269609:	  trying file=/lib64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	
+    269609:	find library=libbfd-2.25.1-32.base.el7_4.2.so [0]; searching
+    269609:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269609:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libbfd-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libbfd-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=/glade/work/gdicker/opt/lib/libbfd-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=tls/x86_64/libbfd-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=tls/libbfd-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=x86_64/libbfd-2.25.1-32.base.el7_4.2.so
+    269609:	  trying file=libbfd-2.25.1-32.base.el7_4.2.so
+    269609:	 search cache=/etc/ld.so.cache
+    269609:	  trying file=/lib64/libbfd-2.25.1-32.base.el7_4.2.so
+    269609:	
+    269609:	find library=libz.so.1 [0]; searching
+    269609:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269609:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libz.so.1
+    269609:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libz.so.1
+    269609:	  trying file=/glade/work/gdicker/opt/lib/libz.so.1
+    269609:	  trying file=tls/x86_64/libz.so.1
+    269609:	  trying file=tls/libz.so.1
+    269609:	  trying file=x86_64/libz.so.1
+    269609:	  trying file=libz.so.1
+    269609:	 search cache=/etc/ld.so.cache
+    269609:	  trying file=/lib64/libz.so.1
+    269609:	
+    269609:	find library=libdl.so.2 [0]; searching
+    269609:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269609:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libdl.so.2
+    269609:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libdl.so.2
+    269609:	  trying file=/glade/work/gdicker/opt/lib/libdl.so.2
+    269609:	  trying file=tls/x86_64/libdl.so.2
+    269609:	  trying file=tls/libdl.so.2
+    269609:	  trying file=x86_64/libdl.so.2
+    269609:	  trying file=libdl.so.2
+    269609:	 search cache=/etc/ld.so.cache
+    269609:	  trying file=/lib64/libdl.so.2
+    269609:	
+    269609:	find library=libc.so.6 [0]; searching
+    269609:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269609:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libc.so.6
+    269609:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libc.so.6
+    269609:	  trying file=/glade/work/gdicker/opt/lib/libc.so.6
+    269609:	  trying file=tls/x86_64/libc.so.6
+    269609:	  trying file=tls/libc.so.6
+    269609:	  trying file=x86_64/libc.so.6
+    269609:	  trying file=libc.so.6
+    269609:	 search cache=/etc/ld.so.cache
+    269609:	  trying file=/lib64/libc.so.6
+    269609:	
+    269609:	find library=libgcc_s.so.1 [0]; searching
+    269609:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269609:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libgcc_s.so.1
+    269609:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libgcc_s.so.1
+    269609:	  trying file=/glade/work/gdicker/opt/lib/libgcc_s.so.1
+    269609:	  trying file=tls/x86_64/libgcc_s.so.1
+    269609:	  trying file=tls/libgcc_s.so.1
+    269609:	  trying file=x86_64/libgcc_s.so.1
+    269609:	  trying file=libgcc_s.so.1
+    269609:	 search cache=/etc/ld.so.cache
+    269609:	  trying file=/lib64/libgcc_s.so.1
+    269609:	
+    269609:	
+    269609:	calling init: /lib64/libc.so.6
+    269609:	
+    269609:	
+    269609:	calling init: /lib64/libgcc_s.so.1
+    269609:	
+    269609:	
+    269609:	calling init: /lib64/libdl.so.2
+    269609:	
+    269609:	
+    269609:	calling init: /lib64/libz.so.1
+    269609:	
+    269609:	
+    269609:	calling init: /lib64/libbfd-2.25.1-32.base.el7_4.2.so
+    269609:	
+    269609:	
+    269609:	calling init: /lib64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269609:	
+    269609:	
+    269609:	initialize program: as
+    269609:	
+    269609:	
+    269609:	transferring control: as
+    269609:	
+    269609:	
+    269609:	calling fini: as [0]
+    269609:	
+    269609:	
+    269609:	calling fini: /lib64/libopcodes-2.25.1-32.base.el7_4.2.so [0]
+    269609:	
+    269609:	
+    269609:	calling fini: /lib64/libbfd-2.25.1-32.base.el7_4.2.so [0]
+    269609:	
+    269609:	
+    269609:	calling fini: /lib64/libz.so.1 [0]
+    269609:	
+    269609:	
+    269609:	calling fini: /lib64/libdl.so.2 [0]
+    269609:	
+    269609:	
+    269609:	calling fini: /lib64/libgcc_s.so.1 [0]
+    269609:	
+    269607:	
+    269607:	calling fini: gfortran [0]
+    269607:	
+    269607:	
+    269607:	calling fini: /lib64/libm.so.6 [0]
+    269607:	
+gfortran -c task2_m.f90 -I/usr/include  -llapack -lblas
+    269610:	find library=libm.so.6 [0]; searching
+    269610:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64:/glade/work/gdicker/opt/openmpi314/lib/tls:/glade/work/gdicker/opt/openmpi314/lib/x86_64:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib/tls/x86_64:/glade/work/gdicker/opt/lib/tls:/glade/work/gdicker/opt/lib/x86_64:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269610:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64/libm.so.6
+    269610:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/libm.so.6
+    269610:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64/libm.so.6
+    269610:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libm.so.6
+    269610:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64/libm.so.6
+    269610:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/libm.so.6
+    269610:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/x86_64/libm.so.6
+    269610:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libm.so.6
+    269610:	  trying file=/glade/work/gdicker/opt/lib/tls/x86_64/libm.so.6
+    269610:	  trying file=/glade/work/gdicker/opt/lib/tls/libm.so.6
+    269610:	  trying file=/glade/work/gdicker/opt/lib/x86_64/libm.so.6
+    269610:	  trying file=/glade/work/gdicker/opt/lib/libm.so.6
+    269610:	  trying file=tls/x86_64/libm.so.6
+    269610:	  trying file=tls/libm.so.6
+    269610:	  trying file=x86_64/libm.so.6
+    269610:	  trying file=libm.so.6
+    269610:	 search cache=/etc/ld.so.cache
+    269610:	  trying file=/lib64/libm.so.6
+    269610:	
+    269610:	find library=libc.so.6 [0]; searching
+    269610:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269610:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libc.so.6
+    269610:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libc.so.6
+    269610:	  trying file=/glade/work/gdicker/opt/lib/libc.so.6
+    269610:	  trying file=tls/x86_64/libc.so.6
+    269610:	  trying file=tls/libc.so.6
+    269610:	  trying file=x86_64/libc.so.6
+    269610:	  trying file=libc.so.6
+    269610:	 search cache=/etc/ld.so.cache
+    269610:	  trying file=/lib64/libc.so.6
+    269610:	
+    269610:	
+    269610:	calling init: /lib64/libc.so.6
+    269610:	
+    269610:	
+    269610:	calling init: /lib64/libm.so.6
+    269610:	
+    269610:	
+    269610:	initialize program: gfortran
+    269610:	
+    269610:	
+    269610:	transferring control: gfortran
+    269610:	
+    269611:	find library=libdl.so.2 [0]; searching
+    269611:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64:/glade/work/gdicker/opt/openmpi314/lib/tls:/glade/work/gdicker/opt/openmpi314/lib/x86_64:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib/tls/x86_64:/glade/work/gdicker/opt/lib/tls:/glade/work/gdicker/opt/lib/x86_64:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269611:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64/libdl.so.2
+    269611:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/libdl.so.2
+    269611:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64/libdl.so.2
+    269611:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libdl.so.2
+    269611:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64/libdl.so.2
+    269611:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/libdl.so.2
+    269611:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/x86_64/libdl.so.2
+    269611:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libdl.so.2
+    269611:	  trying file=/glade/work/gdicker/opt/lib/tls/x86_64/libdl.so.2
+    269611:	  trying file=/glade/work/gdicker/opt/lib/tls/libdl.so.2
+    269611:	  trying file=/glade/work/gdicker/opt/lib/x86_64/libdl.so.2
+    269611:	  trying file=/glade/work/gdicker/opt/lib/libdl.so.2
+    269611:	  trying file=tls/x86_64/libdl.so.2
+    269611:	  trying file=tls/libdl.so.2
+    269611:	  trying file=x86_64/libdl.so.2
+    269611:	  trying file=libdl.so.2
+    269611:	 search cache=/etc/ld.so.cache
+    269611:	  trying file=/lib64/libdl.so.2
+    269611:	
+    269611:	find library=libmpc.so.3 [0]; searching
+    269611:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269611:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libmpc.so.3
+    269611:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libmpc.so.3
+    269611:	  trying file=/glade/work/gdicker/opt/lib/libmpc.so.3
+    269611:	  trying file=tls/x86_64/libmpc.so.3
+    269611:	  trying file=tls/libmpc.so.3
+    269611:	  trying file=x86_64/libmpc.so.3
+    269611:	  trying file=libmpc.so.3
+    269611:	 search cache=/etc/ld.so.cache
+    269611:	  trying file=/lib64/libmpc.so.3
+    269611:	
+    269611:	find library=libmpfr.so.4 [0]; searching
+    269611:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269611:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libmpfr.so.4
+    269611:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libmpfr.so.4
+    269611:	  trying file=/glade/work/gdicker/opt/lib/libmpfr.so.4
+    269611:	  trying file=tls/x86_64/libmpfr.so.4
+    269611:	  trying file=tls/libmpfr.so.4
+    269611:	  trying file=x86_64/libmpfr.so.4
+    269611:	  trying file=libmpfr.so.4
+    269611:	 search cache=/etc/ld.so.cache
+    269611:	  trying file=/lib64/libmpfr.so.4
+    269611:	
+    269611:	find library=libgmp.so.10 [0]; searching
+    269611:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269611:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libgmp.so.10
+    269611:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libgmp.so.10
+    269611:	  trying file=/glade/work/gdicker/opt/lib/libgmp.so.10
+    269611:	  trying file=tls/x86_64/libgmp.so.10
+    269611:	  trying file=tls/libgmp.so.10
+    269611:	  trying file=x86_64/libgmp.so.10
+    269611:	  trying file=libgmp.so.10
+    269611:	 search cache=/etc/ld.so.cache
+    269611:	  trying file=/lib64/libgmp.so.10
+    269611:	
+    269611:	find library=libz.so.1 [0]; searching
+    269611:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269611:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libz.so.1
+    269611:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libz.so.1
+    269611:	  trying file=/glade/work/gdicker/opt/lib/libz.so.1
+    269611:	  trying file=tls/x86_64/libz.so.1
+    269611:	  trying file=tls/libz.so.1
+    269611:	  trying file=x86_64/libz.so.1
+    269611:	  trying file=libz.so.1
+    269611:	 search cache=/etc/ld.so.cache
+    269611:	  trying file=/lib64/libz.so.1
+    269611:	
+    269611:	find library=libm.so.6 [0]; searching
+    269611:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269611:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libm.so.6
+    269611:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libm.so.6
+    269611:	  trying file=/glade/work/gdicker/opt/lib/libm.so.6
+    269611:	  trying file=tls/x86_64/libm.so.6
+    269611:	  trying file=tls/libm.so.6
+    269611:	  trying file=x86_64/libm.so.6
+    269611:	  trying file=libm.so.6
+    269611:	 search cache=/etc/ld.so.cache
+    269611:	  trying file=/lib64/libm.so.6
+    269611:	
+    269611:	find library=libc.so.6 [0]; searching
+    269611:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269611:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libc.so.6
+    269611:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libc.so.6
+    269611:	  trying file=/glade/work/gdicker/opt/lib/libc.so.6
+    269611:	  trying file=tls/x86_64/libc.so.6
+    269611:	  trying file=tls/libc.so.6
+    269611:	  trying file=x86_64/libc.so.6
+    269611:	  trying file=libc.so.6
+    269611:	 search cache=/etc/ld.so.cache
+    269611:	  trying file=/lib64/libc.so.6
+    269611:	
+    269611:	
+    269611:	calling init: /lib64/libc.so.6
+    269611:	
+    269611:	
+    269611:	calling init: /lib64/libm.so.6
+    269611:	
+    269611:	
+    269611:	calling init: /lib64/libz.so.1
+    269611:	
+    269611:	
+    269611:	calling init: /lib64/libgmp.so.10
+    269611:	
+    269611:	
+    269611:	calling init: /lib64/libmpfr.so.4
+    269611:	
+    269611:	
+    269611:	calling init: /lib64/libmpc.so.3
+    269611:	
+    269611:	
+    269611:	calling init: /lib64/libdl.so.2
+    269611:	
+    269611:	
+    269611:	initialize program: /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/f951
+    269611:	
+    269611:	
+    269611:	transferring control: /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/f951
+    269611:	
+    269611:	
+    269611:	calling fini: /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/f951 [0]
+    269611:	
+    269611:	
+    269611:	calling fini: /lib64/libdl.so.2 [0]
+    269611:	
+    269611:	
+    269611:	calling fini: /lib64/libmpc.so.3 [0]
+    269611:	
+    269611:	
+    269611:	calling fini: /lib64/libmpfr.so.4 [0]
+    269611:	
+    269611:	
+    269611:	calling fini: /lib64/libgmp.so.10 [0]
+    269611:	
+    269611:	
+    269611:	calling fini: /lib64/libz.so.1 [0]
+    269611:	
+    269611:	
+    269611:	calling fini: /lib64/libm.so.6 [0]
+    269611:	
+    269612:	find library=libopcodes-2.25.1-32.base.el7_4.2.so [0]; searching
+    269612:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64:/glade/work/gdicker/opt/openmpi314/lib/tls:/glade/work/gdicker/opt/openmpi314/lib/x86_64:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib/tls/x86_64:/glade/work/gdicker/opt/lib/tls:/glade/work/gdicker/opt/lib/x86_64:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269612:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=/glade/work/gdicker/opt/lib/tls/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=/glade/work/gdicker/opt/lib/tls/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=/glade/work/gdicker/opt/lib/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=/glade/work/gdicker/opt/lib/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=tls/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=tls/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	 search cache=/etc/ld.so.cache
+    269612:	  trying file=/lib64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	
+    269612:	find library=libbfd-2.25.1-32.base.el7_4.2.so [0]; searching
+    269612:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269612:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libbfd-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libbfd-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=/glade/work/gdicker/opt/lib/libbfd-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=tls/x86_64/libbfd-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=tls/libbfd-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=x86_64/libbfd-2.25.1-32.base.el7_4.2.so
+    269612:	  trying file=libbfd-2.25.1-32.base.el7_4.2.so
+    269612:	 search cache=/etc/ld.so.cache
+    269612:	  trying file=/lib64/libbfd-2.25.1-32.base.el7_4.2.so
+    269612:	
+    269612:	find library=libz.so.1 [0]; searching
+    269612:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269612:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libz.so.1
+    269612:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libz.so.1
+    269612:	  trying file=/glade/work/gdicker/opt/lib/libz.so.1
+    269612:	  trying file=tls/x86_64/libz.so.1
+    269612:	  trying file=tls/libz.so.1
+    269612:	  trying file=x86_64/libz.so.1
+    269612:	  trying file=libz.so.1
+    269612:	 search cache=/etc/ld.so.cache
+    269612:	  trying file=/lib64/libz.so.1
+    269612:	
+    269612:	find library=libdl.so.2 [0]; searching
+    269612:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269612:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libdl.so.2
+    269612:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libdl.so.2
+    269612:	  trying file=/glade/work/gdicker/opt/lib/libdl.so.2
+    269612:	  trying file=tls/x86_64/libdl.so.2
+    269612:	  trying file=tls/libdl.so.2
+    269612:	  trying file=x86_64/libdl.so.2
+    269612:	  trying file=libdl.so.2
+    269612:	 search cache=/etc/ld.so.cache
+    269612:	  trying file=/lib64/libdl.so.2
+    269612:	
+    269612:	find library=libc.so.6 [0]; searching
+    269612:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269612:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libc.so.6
+    269612:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libc.so.6
+    269612:	  trying file=/glade/work/gdicker/opt/lib/libc.so.6
+    269612:	  trying file=tls/x86_64/libc.so.6
+    269612:	  trying file=tls/libc.so.6
+    269612:	  trying file=x86_64/libc.so.6
+    269612:	  trying file=libc.so.6
+    269612:	 search cache=/etc/ld.so.cache
+    269612:	  trying file=/lib64/libc.so.6
+    269612:	
+    269612:	find library=libgcc_s.so.1 [0]; searching
+    269612:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269612:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libgcc_s.so.1
+    269612:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libgcc_s.so.1
+    269612:	  trying file=/glade/work/gdicker/opt/lib/libgcc_s.so.1
+    269612:	  trying file=tls/x86_64/libgcc_s.so.1
+    269612:	  trying file=tls/libgcc_s.so.1
+    269612:	  trying file=x86_64/libgcc_s.so.1
+    269612:	  trying file=libgcc_s.so.1
+    269612:	 search cache=/etc/ld.so.cache
+    269612:	  trying file=/lib64/libgcc_s.so.1
+    269612:	
+    269612:	
+    269612:	calling init: /lib64/libc.so.6
+    269612:	
+    269612:	
+    269612:	calling init: /lib64/libgcc_s.so.1
+    269612:	
+    269612:	
+    269612:	calling init: /lib64/libdl.so.2
+    269612:	
+    269612:	
+    269612:	calling init: /lib64/libz.so.1
+    269612:	
+    269612:	
+    269612:	calling init: /lib64/libbfd-2.25.1-32.base.el7_4.2.so
+    269612:	
+    269612:	
+    269612:	calling init: /lib64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269612:	
+    269612:	
+    269612:	initialize program: as
+    269612:	
+    269612:	
+    269612:	transferring control: as
+    269612:	
+    269612:	
+    269612:	calling fini: as [0]
+    269612:	
+    269612:	
+    269612:	calling fini: /lib64/libopcodes-2.25.1-32.base.el7_4.2.so [0]
+    269612:	
+    269612:	
+    269612:	calling fini: /lib64/libbfd-2.25.1-32.base.el7_4.2.so [0]
+    269612:	
+    269612:	
+    269612:	calling fini: /lib64/libz.so.1 [0]
+    269612:	
+    269612:	
+    269612:	calling fini: /lib64/libdl.so.2 [0]
+    269612:	
+    269612:	
+    269612:	calling fini: /lib64/libgcc_s.so.1 [0]
+    269612:	
+    269610:	
+    269610:	calling fini: gfortran [0]
+    269610:	
+    269610:	
+    269610:	calling fini: /lib64/libm.so.6 [0]
+    269610:	
+gfortran -c task2.f90 -I/usr/include  -llapack -lblas
+    269613:	find library=libm.so.6 [0]; searching
+    269613:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64:/glade/work/gdicker/opt/openmpi314/lib/tls:/glade/work/gdicker/opt/openmpi314/lib/x86_64:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib/tls/x86_64:/glade/work/gdicker/opt/lib/tls:/glade/work/gdicker/opt/lib/x86_64:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269613:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64/libm.so.6
+    269613:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/libm.so.6
+    269613:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64/libm.so.6
+    269613:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libm.so.6
+    269613:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64/libm.so.6
+    269613:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/libm.so.6
+    269613:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/x86_64/libm.so.6
+    269613:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libm.so.6
+    269613:	  trying file=/glade/work/gdicker/opt/lib/tls/x86_64/libm.so.6
+    269613:	  trying file=/glade/work/gdicker/opt/lib/tls/libm.so.6
+    269613:	  trying file=/glade/work/gdicker/opt/lib/x86_64/libm.so.6
+    269613:	  trying file=/glade/work/gdicker/opt/lib/libm.so.6
+    269613:	  trying file=tls/x86_64/libm.so.6
+    269613:	  trying file=tls/libm.so.6
+    269613:	  trying file=x86_64/libm.so.6
+    269613:	  trying file=libm.so.6
+    269613:	 search cache=/etc/ld.so.cache
+    269613:	  trying file=/lib64/libm.so.6
+    269613:	
+    269613:	find library=libc.so.6 [0]; searching
+    269613:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269613:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libc.so.6
+    269613:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libc.so.6
+    269613:	  trying file=/glade/work/gdicker/opt/lib/libc.so.6
+    269613:	  trying file=tls/x86_64/libc.so.6
+    269613:	  trying file=tls/libc.so.6
+    269613:	  trying file=x86_64/libc.so.6
+    269613:	  trying file=libc.so.6
+    269613:	 search cache=/etc/ld.so.cache
+    269613:	  trying file=/lib64/libc.so.6
+    269613:	
+    269613:	
+    269613:	calling init: /lib64/libc.so.6
+    269613:	
+    269613:	
+    269613:	calling init: /lib64/libm.so.6
+    269613:	
+    269613:	
+    269613:	initialize program: gfortran
+    269613:	
+    269613:	
+    269613:	transferring control: gfortran
+    269613:	
+    269614:	find library=libdl.so.2 [0]; searching
+    269614:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64:/glade/work/gdicker/opt/openmpi314/lib/tls:/glade/work/gdicker/opt/openmpi314/lib/x86_64:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib/tls/x86_64:/glade/work/gdicker/opt/lib/tls:/glade/work/gdicker/opt/lib/x86_64:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269614:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64/libdl.so.2
+    269614:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/libdl.so.2
+    269614:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64/libdl.so.2
+    269614:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libdl.so.2
+    269614:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64/libdl.so.2
+    269614:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/libdl.so.2
+    269614:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/x86_64/libdl.so.2
+    269614:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libdl.so.2
+    269614:	  trying file=/glade/work/gdicker/opt/lib/tls/x86_64/libdl.so.2
+    269614:	  trying file=/glade/work/gdicker/opt/lib/tls/libdl.so.2
+    269614:	  trying file=/glade/work/gdicker/opt/lib/x86_64/libdl.so.2
+    269614:	  trying file=/glade/work/gdicker/opt/lib/libdl.so.2
+    269614:	  trying file=tls/x86_64/libdl.so.2
+    269614:	  trying file=tls/libdl.so.2
+    269614:	  trying file=x86_64/libdl.so.2
+    269614:	  trying file=libdl.so.2
+    269614:	 search cache=/etc/ld.so.cache
+    269614:	  trying file=/lib64/libdl.so.2
+    269614:	
+    269614:	find library=libmpc.so.3 [0]; searching
+    269614:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269614:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libmpc.so.3
+    269614:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libmpc.so.3
+    269614:	  trying file=/glade/work/gdicker/opt/lib/libmpc.so.3
+    269614:	  trying file=tls/x86_64/libmpc.so.3
+    269614:	  trying file=tls/libmpc.so.3
+    269614:	  trying file=x86_64/libmpc.so.3
+    269614:	  trying file=libmpc.so.3
+    269614:	 search cache=/etc/ld.so.cache
+    269614:	  trying file=/lib64/libmpc.so.3
+    269614:	
+    269614:	find library=libmpfr.so.4 [0]; searching
+    269614:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269614:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libmpfr.so.4
+    269614:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libmpfr.so.4
+    269614:	  trying file=/glade/work/gdicker/opt/lib/libmpfr.so.4
+    269614:	  trying file=tls/x86_64/libmpfr.so.4
+    269614:	  trying file=tls/libmpfr.so.4
+    269614:	  trying file=x86_64/libmpfr.so.4
+    269614:	  trying file=libmpfr.so.4
+    269614:	 search cache=/etc/ld.so.cache
+    269614:	  trying file=/lib64/libmpfr.so.4
+    269614:	
+    269614:	find library=libgmp.so.10 [0]; searching
+    269614:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269614:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libgmp.so.10
+    269614:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libgmp.so.10
+    269614:	  trying file=/glade/work/gdicker/opt/lib/libgmp.so.10
+    269614:	  trying file=tls/x86_64/libgmp.so.10
+    269614:	  trying file=tls/libgmp.so.10
+    269614:	  trying file=x86_64/libgmp.so.10
+    269614:	  trying file=libgmp.so.10
+    269614:	 search cache=/etc/ld.so.cache
+    269614:	  trying file=/lib64/libgmp.so.10
+    269614:	
+    269614:	find library=libz.so.1 [0]; searching
+    269614:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269614:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libz.so.1
+    269614:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libz.so.1
+    269614:	  trying file=/glade/work/gdicker/opt/lib/libz.so.1
+    269614:	  trying file=tls/x86_64/libz.so.1
+    269614:	  trying file=tls/libz.so.1
+    269614:	  trying file=x86_64/libz.so.1
+    269614:	  trying file=libz.so.1
+    269614:	 search cache=/etc/ld.so.cache
+    269614:	  trying file=/lib64/libz.so.1
+    269614:	
+    269614:	find library=libm.so.6 [0]; searching
+    269614:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269614:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libm.so.6
+    269614:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libm.so.6
+    269614:	  trying file=/glade/work/gdicker/opt/lib/libm.so.6
+    269614:	  trying file=tls/x86_64/libm.so.6
+    269614:	  trying file=tls/libm.so.6
+    269614:	  trying file=x86_64/libm.so.6
+    269614:	  trying file=libm.so.6
+    269614:	 search cache=/etc/ld.so.cache
+    269614:	  trying file=/lib64/libm.so.6
+    269614:	
+    269614:	find library=libc.so.6 [0]; searching
+    269614:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269614:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libc.so.6
+    269614:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libc.so.6
+    269614:	  trying file=/glade/work/gdicker/opt/lib/libc.so.6
+    269614:	  trying file=tls/x86_64/libc.so.6
+    269614:	  trying file=tls/libc.so.6
+    269614:	  trying file=x86_64/libc.so.6
+    269614:	  trying file=libc.so.6
+    269614:	 search cache=/etc/ld.so.cache
+    269614:	  trying file=/lib64/libc.so.6
+    269614:	
+    269614:	
+    269614:	calling init: /lib64/libc.so.6
+    269614:	
+    269614:	
+    269614:	calling init: /lib64/libm.so.6
+    269614:	
+    269614:	
+    269614:	calling init: /lib64/libz.so.1
+    269614:	
+    269614:	
+    269614:	calling init: /lib64/libgmp.so.10
+    269614:	
+    269614:	
+    269614:	calling init: /lib64/libmpfr.so.4
+    269614:	
+    269614:	
+    269614:	calling init: /lib64/libmpc.so.3
+    269614:	
+    269614:	
+    269614:	calling init: /lib64/libdl.so.2
+    269614:	
+    269614:	
+    269614:	initialize program: /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/f951
+    269614:	
+    269614:	
+    269614:	transferring control: /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/f951
+    269614:	
+    269614:	
+    269614:	calling fini: /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/f951 [0]
+    269614:	
+    269614:	
+    269614:	calling fini: /lib64/libdl.so.2 [0]
+    269614:	
+    269614:	
+    269614:	calling fini: /lib64/libmpc.so.3 [0]
+    269614:	
+    269614:	
+    269614:	calling fini: /lib64/libmpfr.so.4 [0]
+    269614:	
+    269614:	
+    269614:	calling fini: /lib64/libgmp.so.10 [0]
+    269614:	
+    269614:	
+    269614:	calling fini: /lib64/libz.so.1 [0]
+    269614:	
+    269614:	
+    269614:	calling fini: /lib64/libm.so.6 [0]
+    269614:	
+    269615:	find library=libopcodes-2.25.1-32.base.el7_4.2.so [0]; searching
+    269615:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64:/glade/work/gdicker/opt/openmpi314/lib/tls:/glade/work/gdicker/opt/openmpi314/lib/x86_64:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib/tls/x86_64:/glade/work/gdicker/opt/lib/tls:/glade/work/gdicker/opt/lib/x86_64:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269615:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=/glade/work/gdicker/opt/lib/tls/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=/glade/work/gdicker/opt/lib/tls/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=/glade/work/gdicker/opt/lib/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=/glade/work/gdicker/opt/lib/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=tls/x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=tls/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=x86_64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	 search cache=/etc/ld.so.cache
+    269615:	  trying file=/lib64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	
+    269615:	find library=libbfd-2.25.1-32.base.el7_4.2.so [0]; searching
+    269615:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269615:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libbfd-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libbfd-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=/glade/work/gdicker/opt/lib/libbfd-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=tls/x86_64/libbfd-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=tls/libbfd-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=x86_64/libbfd-2.25.1-32.base.el7_4.2.so
+    269615:	  trying file=libbfd-2.25.1-32.base.el7_4.2.so
+    269615:	 search cache=/etc/ld.so.cache
+    269615:	  trying file=/lib64/libbfd-2.25.1-32.base.el7_4.2.so
+    269615:	
+    269615:	find library=libz.so.1 [0]; searching
+    269615:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269615:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libz.so.1
+    269615:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libz.so.1
+    269615:	  trying file=/glade/work/gdicker/opt/lib/libz.so.1
+    269615:	  trying file=tls/x86_64/libz.so.1
+    269615:	  trying file=tls/libz.so.1
+    269615:	  trying file=x86_64/libz.so.1
+    269615:	  trying file=libz.so.1
+    269615:	 search cache=/etc/ld.so.cache
+    269615:	  trying file=/lib64/libz.so.1
+    269615:	
+    269615:	find library=libdl.so.2 [0]; searching
+    269615:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269615:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libdl.so.2
+    269615:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libdl.so.2
+    269615:	  trying file=/glade/work/gdicker/opt/lib/libdl.so.2
+    269615:	  trying file=tls/x86_64/libdl.so.2
+    269615:	  trying file=tls/libdl.so.2
+    269615:	  trying file=x86_64/libdl.so.2
+    269615:	  trying file=libdl.so.2
+    269615:	 search cache=/etc/ld.so.cache
+    269615:	  trying file=/lib64/libdl.so.2
+    269615:	
+    269615:	find library=libc.so.6 [0]; searching
+    269615:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269615:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libc.so.6
+    269615:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libc.so.6
+    269615:	  trying file=/glade/work/gdicker/opt/lib/libc.so.6
+    269615:	  trying file=tls/x86_64/libc.so.6
+    269615:	  trying file=tls/libc.so.6
+    269615:	  trying file=x86_64/libc.so.6
+    269615:	  trying file=libc.so.6
+    269615:	 search cache=/etc/ld.so.cache
+    269615:	  trying file=/lib64/libc.so.6
+    269615:	
+    269615:	find library=libgcc_s.so.1 [0]; searching
+    269615:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269615:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libgcc_s.so.1
+    269615:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libgcc_s.so.1
+    269615:	  trying file=/glade/work/gdicker/opt/lib/libgcc_s.so.1
+    269615:	  trying file=tls/x86_64/libgcc_s.so.1
+    269615:	  trying file=tls/libgcc_s.so.1
+    269615:	  trying file=x86_64/libgcc_s.so.1
+    269615:	  trying file=libgcc_s.so.1
+    269615:	 search cache=/etc/ld.so.cache
+    269615:	  trying file=/lib64/libgcc_s.so.1
+    269615:	
+    269615:	
+    269615:	calling init: /lib64/libc.so.6
+    269615:	
+    269615:	
+    269615:	calling init: /lib64/libgcc_s.so.1
+    269615:	
+    269615:	
+    269615:	calling init: /lib64/libdl.so.2
+    269615:	
+    269615:	
+    269615:	calling init: /lib64/libz.so.1
+    269615:	
+    269615:	
+    269615:	calling init: /lib64/libbfd-2.25.1-32.base.el7_4.2.so
+    269615:	
+    269615:	
+    269615:	calling init: /lib64/libopcodes-2.25.1-32.base.el7_4.2.so
+    269615:	
+    269615:	
+    269615:	initialize program: as
+    269615:	
+    269615:	
+    269615:	transferring control: as
+    269615:	
+    269615:	
+    269615:	calling fini: as [0]
+    269615:	
+    269615:	
+    269615:	calling fini: /lib64/libopcodes-2.25.1-32.base.el7_4.2.so [0]
+    269615:	
+    269615:	
+    269615:	calling fini: /lib64/libbfd-2.25.1-32.base.el7_4.2.so [0]
+    269615:	
+    269615:	
+    269615:	calling fini: /lib64/libz.so.1 [0]
+    269615:	
+    269615:	
+    269615:	calling fini: /lib64/libdl.so.2 [0]
+    269615:	
+    269615:	
+    269615:	calling fini: /lib64/libgcc_s.so.1 [0]
+    269615:	
+    269613:	
+    269613:	calling fini: gfortran [0]
+    269613:	
+    269613:	
+    269613:	calling fini: /lib64/libm.so.6 [0]
+    269613:	
+gfortran -o daxpy task2.o task2_m.o -I/usr/include  -llapack -lblas
+    269616:	find library=libm.so.6 [0]; searching
+    269616:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64:/glade/work/gdicker/opt/openmpi314/lib/tls:/glade/work/gdicker/opt/openmpi314/lib/x86_64:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib/tls/x86_64:/glade/work/gdicker/opt/lib/tls:/glade/work/gdicker/opt/lib/x86_64:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269616:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64/libm.so.6
+    269616:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/libm.so.6
+    269616:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64/libm.so.6
+    269616:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libm.so.6
+    269616:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64/libm.so.6
+    269616:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/libm.so.6
+    269616:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/x86_64/libm.so.6
+    269616:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libm.so.6
+    269616:	  trying file=/glade/work/gdicker/opt/lib/tls/x86_64/libm.so.6
+    269616:	  trying file=/glade/work/gdicker/opt/lib/tls/libm.so.6
+    269616:	  trying file=/glade/work/gdicker/opt/lib/x86_64/libm.so.6
+    269616:	  trying file=/glade/work/gdicker/opt/lib/libm.so.6
+    269616:	  trying file=tls/x86_64/libm.so.6
+    269616:	  trying file=tls/libm.so.6
+    269616:	  trying file=x86_64/libm.so.6
+    269616:	  trying file=libm.so.6
+    269616:	 search cache=/etc/ld.so.cache
+    269616:	  trying file=/lib64/libm.so.6
+    269616:	
+    269616:	find library=libc.so.6 [0]; searching
+    269616:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269616:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libc.so.6
+    269616:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libc.so.6
+    269616:	  trying file=/glade/work/gdicker/opt/lib/libc.so.6
+    269616:	  trying file=tls/x86_64/libc.so.6
+    269616:	  trying file=tls/libc.so.6
+    269616:	  trying file=x86_64/libc.so.6
+    269616:	  trying file=libc.so.6
+    269616:	 search cache=/etc/ld.so.cache
+    269616:	  trying file=/lib64/libc.so.6
+    269616:	
+    269616:	
+    269616:	calling init: /lib64/libc.so.6
+    269616:	
+    269616:	
+    269616:	calling init: /lib64/libm.so.6
+    269616:	
+    269616:	
+    269616:	initialize program: gfortran
+    269616:	
+    269616:	
+    269616:	transferring control: gfortran
+    269616:	
+    269617:	find library=libm.so.6 [0]; searching
+    269617:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64:/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64:/glade/work/gdicker/opt/openmpi314/lib/tls:/glade/work/gdicker/opt/openmpi314/lib/x86_64:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib/tls/x86_64:/glade/work/gdicker/opt/lib/tls:/glade/work/gdicker/opt/lib/x86_64:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269617:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/x86_64/libm.so.6
+    269617:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/tls/libm.so.6
+    269617:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/x86_64/libm.so.6
+    269617:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libm.so.6
+    269617:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/x86_64/libm.so.6
+    269617:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/tls/libm.so.6
+    269617:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/x86_64/libm.so.6
+    269617:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libm.so.6
+    269617:	  trying file=/glade/work/gdicker/opt/lib/tls/x86_64/libm.so.6
+    269617:	  trying file=/glade/work/gdicker/opt/lib/tls/libm.so.6
+    269617:	  trying file=/glade/work/gdicker/opt/lib/x86_64/libm.so.6
+    269617:	  trying file=/glade/work/gdicker/opt/lib/libm.so.6
+    269617:	  trying file=tls/x86_64/libm.so.6
+    269617:	  trying file=tls/libm.so.6
+    269617:	  trying file=x86_64/libm.so.6
+    269617:	  trying file=libm.so.6
+    269617:	 search cache=/etc/ld.so.cache
+    269617:	  trying file=/lib64/libm.so.6
+    269617:	
+    269617:	find library=libc.so.6 [0]; searching
+    269617:	 search path=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib:/glade/work/gdicker/opt/openmpi314/lib:/glade/work/gdicker/opt/lib:tls/x86_64:tls:x86_64:		(LD_LIBRARY_PATH)
+    269617:	  trying file=/glade/work/gdicker/opt/pgi/linux86-64/2019/lib/libc.so.6
+    269617:	  trying file=/glade/work/gdicker/opt/openmpi314/lib/libc.so.6
+    269617:	  trying file=/glade/work/gdicker/opt/lib/libc.so.6
+    269617:	  trying file=tls/x86_64/libc.so.6
+    269617:	  trying file=tls/libc.so.6
+    269617:	  trying file=x86_64/libc.so.6
+    269617:	  trying file=libc.so.6
+    269617:	 search cache=/etc/ld.so.cache
+    269617:	  trying file=/lib64/libc.so.6
+    269617:	
+    269617:	
+    269617:	calling init: /lib64/libc.so.6
+    269617:	
+    269617:	
+    269617:	calling init: /lib64/libm.so.6
+    269617:	
+    269617:	
+    269617:	initialize program: /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2
+    269617:	
+    269617:	
+    269617:	transferring control: /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2
+    269617:	
+    269618:	find library=libbfd-2.25.1-32.base.el7_4.2.so [0]; searching
+    269618:	 search path=/usr/lib64/tls/x86_64:/usr/lib64/tls:/usr/lib64/x86_64:/usr/lib64		(system search path)
+    269618:	  trying file=/usr/lib64/tls/x86_64/libbfd-2.25.1-32.base.el7_4.2.so
+    269618:	  trying file=/usr/lib64/tls/libbfd-2.25.1-32.base.el7_4.2.so
+    269618:	  trying file=/usr/lib64/x86_64/libbfd-2.25.1-32.base.el7_4.2.so
+    269618:	  trying file=/usr/lib64/libbfd-2.25.1-32.base.el7_4.2.so
+    269618:	
+    269618:	find library=libz.so.1 [0]; searching
+    269618:	 search path=/usr/lib64/tls:/usr/lib64		(system search path)
+    269618:	  trying file=/usr/lib64/tls/libz.so.1
+    269618:	  trying file=/usr/lib64/libz.so.1
+    269618:	
+    269618:	find library=libdl.so.2 [0]; searching
+    269618:	 search path=/usr/lib64/tls:/usr/lib64		(system search path)
+    269618:	  trying file=/usr/lib64/tls/libdl.so.2
+    269618:	  trying file=/usr/lib64/libdl.so.2
+    269618:	
+    269618:	find library=libc.so.6 [0]; searching
+    269618:	 search path=/usr/lib64/tls:/usr/lib64		(system search path)
+    269618:	  trying file=/usr/lib64/tls/libc.so.6
+    269618:	  trying file=/usr/lib64/libc.so.6
+    269618:	
+    269618:	find library=libgcc_s.so.1 [0]; searching
+    269618:	 search path=/usr/lib64/tls:/usr/lib64		(system search path)
+    269618:	  trying file=/usr/lib64/tls/libgcc_s.so.1
+    269618:	  trying file=/usr/lib64/libgcc_s.so.1
+    269618:	
+    269618:	
+    269618:	calling init: /usr/lib64/libc.so.6
+    269618:	
+    269618:	
+    269618:	calling init: /usr/lib64/libgcc_s.so.1
+    269618:	
+    269618:	
+    269618:	calling init: /usr/lib64/libdl.so.2
+    269618:	
+    269618:	
+    269618:	calling init: /usr/lib64/libz.so.1
+    269618:	
+    269618:	
+    269618:	calling init: /usr/lib64/libbfd-2.25.1-32.base.el7_4.2.so
+    269618:	
+    269618:	
+    269618:	initialize program: /usr/bin/ld
+    269618:	
+    269618:	
+    269618:	transferring control: /usr/bin/ld
+    269618:	
+/usr/bin/ld: cannot find -llapack
+/usr/bin/ld: cannot find -lblas
+    269618:	
+    269618:	calling fini: /usr/bin/ld [0]
+    269618:	
+    269618:	
+    269618:	calling fini: /usr/lib64/libbfd-2.25.1-32.base.el7_4.2.so [0]
+    269618:	
+    269618:	
+    269618:	calling fini: /usr/lib64/libz.so.1 [0]
+    269618:	
+    269618:	
+    269618:	calling fini: /usr/lib64/libdl.so.2 [0]
+    269618:	
+    269618:	
+    269618:	calling fini: /usr/lib64/libgcc_s.so.1 [0]
+    269618:	
+collect2: error: ld returned 1 exit status
+    269617:	
+    269617:	calling fini: /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 [0]
+    269617:	
+    269617:	
+    269617:	calling fini: /lib64/libm.so.6 [0]
+    269617:	
+    269616:	
+    269616:	calling fini: gfortran [0]
+    269616:	
+    269616:	
+    269616:	calling fini: /lib64/libm.so.6 [0]
+    269616:	
+make: *** [daxpy] Error 1
+    269605:	
+    269605:	calling fini: make [0]
+    269605:	
