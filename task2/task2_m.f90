@@ -38,8 +38,8 @@ CONTAINS
                 print *, "sending data to worker ", dest
                 call MPI_SEND(offset, 1, MPI_INTEGER, dest, 1, MPI_COMM_WORLD, ierr)
                 call MPI_SEND(cols, 1, MPI_INTEGER, dest, 1, MPI_COMM_WORLD, ierr)
-                call MPI_SEND(X(offset, 1), N*cols, MPI_REAL, dest, 1, MPI_COMM_WORLD, ierr)
-                call MPI_SEND(Y(offset, 1), N*cols, MPI_REAL, dest, 1, MPI_COMM_WORLD, ierr)
+                call MPI_SEND(X(1, offset), N*cols, MPI_REAL, dest, 1, MPI_COMM_WORLD, ierr)
+                call MPI_SEND(Y(1, offset), N*cols, MPI_REAL, dest, 1, MPI_COMM_WORLD, ierr)
                 offset = offset + cols
             30 continue
 
@@ -48,7 +48,7 @@ CONTAINS
                 print *, "recieving data from worker", source
                 call MPI_RECV(offset, 1, MPI_INTEGER, source, 2, MPI_COMM_WORLD, ierr)
                 call MPI_RECV(cols, 1, MPI_INTEGER, source, 2, MPI_COMM_WORLD, ierr)
-                call MPI_RECV(Z(offset, 1), cols*N, MPI_REAL, source, 2, MPI_COMM_WORLD, ierr)
+                call MPI_RECV(Z(1, offset), cols*N, MPI_REAL, source, 2, MPI_COMM_WORLD, ierr)
             40 continue
         ! worker task
         else
@@ -60,6 +60,7 @@ CONTAINS
            call MPI_RECV(Y, cols*N, MPI_REAL, 0, 1, MPI_COMM_WORLD, ierr)
 
            ! Do the computation
+           print *, "worker", taskid, "doing computation"
            Z = alpha*X + Y
 
            ! Send result back to the master
