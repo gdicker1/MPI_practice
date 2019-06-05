@@ -1,5 +1,6 @@
 module task2_m
 implicit none
+include 'mpif.h'
 
 external SGETRF
 external SGETRI
@@ -12,7 +13,7 @@ CONTAINS
         real, intent(in) :: alpha
         real, dimension(size(X, 1), size(X, 2)), intent(out):: Z
         integer, intent(in) :: taskid, numTasks
-        integer ierr, cols, offset, numWorkers
+        integer ierr, N, cols, offset, numWorkers, dest, source
         logical flag
 
         ! Make sure that MPI has been initialized
@@ -23,27 +24,28 @@ CONTAINS
         end if
 
         numWorkers = numTasks - 1
-        cols = size(X, 1) / numWorkers
+        N = size(X,1)
+        cols = N / numWorkers
         offset = 1
 
         ! If master task
         if (taskid .EQ. 0) then
             ! Split up the matrix for each worker           
-            do 10 dest=1, numWorkers
+            do 30 dest=1, numWorkers
                 call MPI_SEND(offset, 1, MPI_INTEGER, dest, 1, MPI_COMM_WORLD, ierr)
                 call MPI_SEND(cols, 1, MPI_INTEGER, dest, 1, MPI_COMM_WORLD, ierr)
-                call MPI_SEND(X(offset)(1), N*cols, MPI_REAL, dest, 1, MPI_COMM_WORLD, ierr)
-                call MPI_SEND(Y(offset)(1), N*cols, MPI_REAL, dest, 1, MPI_COMM_WORLD, ierr)
-            continue
+                call MPI_SEND(X(offset, 1), N*cols, MPI_REAL, dest, 1, MPI_COMM_WORLD, ierr)
+                call MPI_SEND(Y(offset, 1), N*cols, MPI_REAL, dest, 1, MPI_COMM_WORLD, ierr)
+            30 continue
 
             ! Recieve the results from each worker into the Z matrix
-            do 20 source=1, numWorkers
+            do 40 source=1, numWorkers
                 call MPI_RECV(offset, 1, MPI_INTEGER, source, 2, MPI_COMM_WORLD, ierr)
                 call MPI_RECV(cols, 1, MPI_INTEGER, source, 2, MPI_COMM_WORLD, ierr)
-                call MPI_RECV(Z(offset)(1), cols*N, MPI_REAL, source, 2, MPI_COMM_WORLD, ierr)
-            continue
-
-        else ! worker task
+                call MPI_RECV(Z(offset, 1), cols*N, MPI_REAL, source, 2, MPI_COMM_WORLD, ierr)
+            40 continue
+        ! worker task
+        else
            ! Recieve the data from the master
            call MPI_RECV(offset, 1, MPI_INTEGER, 0, 1, MPI_COMM_WORLD, ierr)
            call MPI_RECV(cols, 1, MPI_INTEGER, 0, 1, MPI_COMM_WORLD, ierr)
