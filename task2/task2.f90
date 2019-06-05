@@ -3,7 +3,7 @@ PROGRAM task2
     IMPLICIT NONE
 
     INTEGER, PARAMETER :: N = 5
-    integer i, j, numtasks, rank, taskid, len, ierr
+    integer i, j, numtasks, rank, len, ierr
     REAL :: alph = 0.5
     REAL, DIMENSION(N, N):: A
     REAL, DIMENSION(N, N) :: B
@@ -39,7 +39,7 @@ PROGRAM task2
     end if
     print *, 'Number of tasks= ',numtasks,' My rank=',rank
 
-    call daxpy(A, B, C, 0.5, taskid, min(N, numtasks-1))
+    call daxpy(A, B, C, 0.5, rank, min(N, numtasks-1))
     if (rank .EQ. 0) then
         write(*, *) "C=", C
     end if

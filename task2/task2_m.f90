@@ -21,6 +21,8 @@ CONTAINS
         if (flag .EQV. .false.) then
             print *, "MPI must be initialized"
             return
+        else
+            print *, "MPI is initialized"
         end if
 
         numWorkers = numTasks - 1
@@ -30,16 +32,20 @@ CONTAINS
 
         ! If master task
         if (taskid .EQ. 0) then
+            print *, "numworkers=", numWorkers, " cols=", cols, " offset=", offset
             ! Split up the matrix for each worker           
             do 30 dest=1, numWorkers
+                print *, "sending data to worker ", dest
                 call MPI_SEND(offset, 1, MPI_INTEGER, dest, 1, MPI_COMM_WORLD, ierr)
                 call MPI_SEND(cols, 1, MPI_INTEGER, dest, 1, MPI_COMM_WORLD, ierr)
                 call MPI_SEND(X(offset, 1), N*cols, MPI_REAL, dest, 1, MPI_COMM_WORLD, ierr)
                 call MPI_SEND(Y(offset, 1), N*cols, MPI_REAL, dest, 1, MPI_COMM_WORLD, ierr)
+                offset = offset + cols
             30 continue
 
             ! Recieve the results from each worker into the Z matrix
             do 40 source=1, numWorkers
+                print *, "recieving data from worker", source
                 call MPI_RECV(offset, 1, MPI_INTEGER, source, 2, MPI_COMM_WORLD, ierr)
                 call MPI_RECV(cols, 1, MPI_INTEGER, source, 2, MPI_COMM_WORLD, ierr)
                 call MPI_RECV(Z(offset, 1), cols*N, MPI_REAL, source, 2, MPI_COMM_WORLD, ierr)
@@ -47,6 +53,7 @@ CONTAINS
         ! worker task
         else
            ! Recieve the data from the master
+           print *, "worker", taskid, "reciving from master"
            call MPI_RECV(offset, 1, MPI_INTEGER, 0, 1, MPI_COMM_WORLD, ierr)
            call MPI_RECV(cols, 1, MPI_INTEGER, 0, 1, MPI_COMM_WORLD, ierr)
            call MPI_RECV(X, cols*N, MPI_REAL, 0, 1, MPI_COMM_WORLD, ierr)
@@ -56,6 +63,7 @@ CONTAINS
            Z = alpha*X + Y
 
            ! Send result back to the master
+           print *, "worker", taskid, "sending results to master"
            call MPI_SEND(offset, 1, MPI_INTEGER, 0, 2, MPI_COMM_WORLD, ierr)
            call MPI_SEND(cols, 1, MPI_INTEGER, 0, 2, MPI_COMM_WORLD, ierr)
            call MPI_SEND(Z, cols*N, MPI_REAL, 0, 2, MPI_COMM_WORLD, ierr)
