@@ -44,12 +44,12 @@ CONTAINS
             30 continue
 
             ! Recieve the results from each worker into the Z matrix
-            do 40 source=1, numWorkers
-                print *, "recieving data from worker", source
-                call MPI_RECV(offset, 1, MPI_INTEGER, source, 2, MPI_COMM_WORLD, ierr)
-                call MPI_RECV(cols, 1, MPI_INTEGER, source, 2, MPI_COMM_WORLD, ierr)
-                call MPI_RECV(Z(1, offset), cols*N, MPI_REAL, source, 2, MPI_COMM_WORLD, ierr)
-            40 continue
+            ! do 40 source=1, numWorkers
+            !     print *, "recieving data from worker", source
+            !     call MPI_RECV(offset, 1, MPI_INTEGER, source, 2, MPI_COMM_WORLD, ierr)
+            !     call MPI_RECV(cols, 1, MPI_INTEGER, source, 2, MPI_COMM_WORLD, ierr)
+            !     call MPI_RECV(Z(1, offset), cols*N, MPI_REAL, source, 2, MPI_COMM_WORLD, ierr)
+            ! 40 continue
         ! worker task
         else
            ! Recieve the data from the master
@@ -60,14 +60,14 @@ CONTAINS
            call MPI_RECV(Y, cols*N, MPI_REAL, 0, 1, MPI_COMM_WORLD, ierr)
 
            ! Do the computation
-           print *, "worker", taskid, "doing computation"
-           Z = alpha*X + Y
+           ! print *, "worker", taskid, "doing computation"
+           ! Z = alpha*X + Y
 
-           ! Send result back to the master
-           print *, "worker", taskid, "sending results to master"
-           call MPI_SEND(offset, 1, MPI_INTEGER, 0, 2, MPI_COMM_WORLD, ierr)
-           call MPI_SEND(cols, 1, MPI_INTEGER, 0, 2, MPI_COMM_WORLD, ierr)
-           call MPI_SEND(Z, cols*N, MPI_REAL, 0, 2, MPI_COMM_WORLD, ierr)
+           ! ! Send result back to the master
+           ! print *, "worker", taskid, "sending results to master"
+           ! call MPI_SEND(offset, 1, MPI_INTEGER, 0, 2, MPI_COMM_WORLD, ierr)
+           ! call MPI_SEND(cols, 1, MPI_INTEGER, 0, 2, MPI_COMM_WORLD, ierr)
+           ! call MPI_SEND(Z, cols*N, MPI_REAL, 0, 2, MPI_COMM_WORLD, ierr)
         end if
 
     end subroutine daxpy
