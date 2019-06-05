@@ -3,7 +3,7 @@
 OBJ = task1.o task1_m.o
 COMP = gfortran
 PROG = daxpy
-INCL = -I /usr/include -L /usr/lib -llapack -lblas
+INCL = -I/usr/include -L/glade/work/gdicker/opt/lib -llapack -lblas
 
 $(PROG): $(OBJ)
 	$(COMP) -o $(PROG) $(OBJ) $(INCL)

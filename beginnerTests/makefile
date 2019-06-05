@@ -2,13 +2,16 @@
 
 # Compilers to be used
 COMP_S = gfortran # serial compiler
-COMP_P = mpifort # parallel compiler
-ifdef CHEY
- COMP_P = ifort
-endif
+COMP_P = mpif90 # parallel compiler
+#ifdef CHEY
+# COMP_P = ifort
+#endif
+
+LIB=/usr/lib64/gcc/x86_64-suse-linux/4.8/
+INCL=$(MPI_INC)
 
 # Executables created 
-PROGS = area mpiHello mpiHelloB mpiHelloN
+PROGS = area mpiQuery mpiHello mpiHelloB mpiHelloN
 
 .PHONY: all clean cleanall cleanhello cleanallhello
 
@@ -19,6 +22,12 @@ area: area.f90 area.o
 
 area.o: area.f90
 	$(COMP_S) -c area.f90
+
+mpiQuery: mpi_QueryStats.f90 mpi_QueryStats.o
+	$(COMP_P) $(OPT_P) -o mpiQuery mpi_QueryStats.o
+
+mpi_QueryStats.o: mpi_QueryStats.f90
+	$(COMP_P) $(OPT_P) -c mpi_QueryStats.f90 
 
 mpiHello: mpi_Hello.f90 mpi_Hello.o
 	$(COMP_P) $(OPT_P) -o mpiHello mpi_Hello.o
@@ -39,11 +48,11 @@ mpi_HelloNsend.o: mpi_HelloNsend.f90
 	$(COMP_P) $(OPT_P) -c mpi_HelloNsend.f90
 
 clean:
-	rm *.o 
-#	rm *.mod
+	rm -rf *.o 
+#	rm -rf *.mod
 
 cleanall:
-	rm $(PROGS)
-	rm *.o
-#	rm *.mod
+	rm -rf $(PROGS)
+	rm -rf *.o
+#	rm -rf *.mod
 	

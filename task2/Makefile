@@ -1,11 +1,12 @@
 # Makefile
 #  Makefile for MPI_practice task1 - Create and parallelize DAXPY code
 OBJ = task2.o task2_m.o
-COMP = gfortran
+COMP = mpif90
 PROG = daxpy
-INCL = -I/usr/include
+INCL = -I$(D_OPT_MPI_INC) -I$(D_OPT_PGI_INC)
 LIB = -L/glade/work/gdicker/opt/lib
 LIBS = -llapack -lblas
+
 
 $(PROG): $(OBJ)
 	$(COMP) -o $(PROG) $(OBJ) $(INCL) $(LIB) $(LIBS)
