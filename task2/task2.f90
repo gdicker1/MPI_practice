@@ -11,8 +11,14 @@ PROGRAM task2
     REAL, DIMENSION(N, N) :: C
     REAL, DIMENSION(N, N) :: Cinv
 
-    call RANDOM_NUMBER(A)
-    call RANDOM_NUMBER(B)
+    !call RANDOM_NUMBER(A)
+    !call RANDOM_NUMBER(B)
+    do 10 i=1,N
+        do 20 j=1,N
+            A(i, j)=i*j
+            B(i, j)=4*(i+j)*j
+        20 continue
+    10 continue
 
     write(*, '(A, I1, A, I1)') "Matrices are size ", shape(A)
 
@@ -38,7 +44,7 @@ PROGRAM task2
 
     write(*, '(A, I1, A, I1)') "Matrices are size ", shape(A)
 
-    call daxpy(A, B, C, 0.5)
+    call daxpy(A, B, C, 0.5, taskid, min(N, numtasks))
     if (rank .EQ. 0)
         write(*, *) "C=", C
     end if
