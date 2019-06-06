@@ -1,3 +1,3 @@
 # Task 4
 
-Turn code into static and shared libraries
+Add OpenACC directives to allow code to utilize a GPU

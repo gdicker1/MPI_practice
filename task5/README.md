@@ -1,3 +1,5 @@
 # Task 5
 
-Add OpenACC directives to allow code to utilize a GPU
+Turn code into static and shared libraries
+
+
