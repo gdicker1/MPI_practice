@@ -14,19 +14,23 @@ PROGRAM task1
     do 10 i=1,N
         do 20 j=1,N
             A(i, j)=i*j
-            B(i, j)=4*(i+j)*j
+            B(i, j)=4*(i-j)*(j+i)
         20 continue
     10 continue
 
     write(*, '(A, I1, A, I1)') "Matrices are size ", shape(A)
 
     call daxpy(A, B, C, 0.5)
-    write(*, *) "A=", A
-    write(*, *) "B=", B
-    write(*, *) "C=", C
+    write(*, *) "A="
+    write(*,*) A
+    write(*, *) "B="
+    write(*,*) B
+    write(*, *) "C="
+    write(*,*) C
 
     Cinv = inv(C)
 
-    write(*, *) "Cinv=C", Cinv
+    write(*, *) "Cinv="
+    write(*,*) Cinv
 
 END PROGRAM task1

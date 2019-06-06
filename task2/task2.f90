@@ -3,13 +3,13 @@ PROGRAM task2
     IMPLICIT NONE
 
     INTEGER, PARAMETER :: N = 5
-    integer i, j, numtasks, rank, len, ierr
+    integer i, j, numtasks, rank, ierr
     REAL :: alph = 0.5
     REAL, DIMENSION(N, N):: A
     REAL, DIMENSION(N, N) :: B
     REAL, DIMENSION(N, N) :: C
     REAL, DIMENSION(N, N) :: Cinv
-
+    
     !print *, "Calling MPI_INIT"
     call MPI_INIT(ierr)
     !print *, "Calling MPI_COMM_RANK"
@@ -25,28 +25,34 @@ PROGRAM task2
     end if
 
     if (rank .EQ. 0) then
+     ! call getarg(i, arg)
       write(*, '(A, I1, A, I1)') "Matrices are size ", shape(A)
 
       do 10 i=1, N
         do 20 j=1, N
           A(i, j)=i*j
-          B(i, j)=4*(i+j)*j
+          B(i, j)=4*(i-j)*(j+i)
         20 continue
       10 continue
 
-      write(*,*) "A=", A
-      write(*,*) "B=", B
+      !write(*,*) "A="
+      !write(*,*) A
+      !write(*,*) "B="
+      !write(*,*) B
     end if
-    print *, 'Number of tasks= ',numtasks,' My rank=',rank
+    !print *, 'Number of tasks= ',numtasks,' My rank=',rank
 
-    call daxpy(A, B, C, 0.5, rank, min(N, numtasks-1))
+    call daxpy(A, B, C, alph, rank, min(N+1, numtasks))
     if (rank .EQ. 0) then
-        write(*, *) "C=", C
+        !write(*, *) "C="
+        !write(*,*) C
+        Cinv = inv(C)
     end if
-    Cinv = inv(C)
+    
 
     if (rank .EQ. 0) then
-        write(*, *) "Cinv=C", Cinv
+        !write(*, *) "Cinv="
+        !write(*,*) Cinv
     end if
 
 99  call MPI_FINALIZE(ierr)
