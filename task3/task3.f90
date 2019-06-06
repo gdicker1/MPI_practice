@@ -26,7 +26,7 @@ PROGRAM task2
 
     if (rank .EQ. 0) then
      ! call getarg(i, arg)
-      write(*, '(A, I1, A, I1)') "Matrices are size ", shape(A)
+      write(*, '(A, I1, A, I1)') "Matrices are size ", N 
 
       do 10 i=1, N
         do 20 j=1, N
@@ -35,24 +35,24 @@ PROGRAM task2
         20 continue
       10 continue
 
-      !write(*,*) "A="
-      !write(*,*) A
-      !write(*,*) "B="
-      !write(*,*) B
+!      write(*,*) "A="
+!      write(*,*) A
+!      write(*,*) "B="
+!      write(*,*) B
     end if
     !print *, 'Number of tasks= ',numtasks,' My rank=',rank
 
     call daxpy(A, B, C, alph, rank, min(N+1, numtasks))
     if (rank .EQ. 0) then
-        !write(*, *) "C="
-        !write(*,*) C
+!        write(*, *) "C="
+!        write(*,*) C
         Cinv = inv(C)
     end if
     
 
     if (rank .EQ. 0) then
-        !write(*, *) "Cinv="
-        !write(*,*) Cinv
+!        write(*, *) "Cinv="
+!        write(*,*) Cinv
     end if
 
 99  call MPI_FINALIZE(ierr)
