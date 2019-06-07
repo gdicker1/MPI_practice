@@ -2,8 +2,8 @@ module task2_m
 implicit none
 include 'mpif.h'
 
-external SGETRF
-external SGETRI
+external PSGETRF
+external PSGETRI
 
 CONTAINS
     subroutine daxpy(X, Y, Z, alpha, taskid, numTasks)
@@ -71,7 +71,7 @@ CONTAINS
            call MPI_SEND(Z, cols*N, MPI_REAL, 0, 2, MPI_COMM_WORLD, ierr)
         else
            ! Do nothing
-           print *, "Worker", taskid, "doing nothing"
+           ! print *, "Worker", taskid, "doing nothing"
         end if
 
     end subroutine daxpy
