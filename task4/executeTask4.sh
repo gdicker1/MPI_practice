@@ -9,7 +9,7 @@
 #PBS -e task2.err
 #PBS -q regular
 
-THEDIR=/glade/work/gdicker/MPI_practice/task3
+THEDIR=/glade/work/gdicker/MPI_practice/task4
 FILE=$THEDIR/daxpy
 
 #source /glade/u/home/gdicker/scripts/setPaths.sh
@@ -18,11 +18,11 @@ module save D_PREV_MODS
 
 module purge
 module load ncarenv/1.2
-module load intel/17.0.1
-module load mpt/2.19
+module load pgi/17.10
+module load openmpi/3.1.2
 module load ncarcompilers/0.4.1
 module load netcdf-mpi/4.6.1
-module load mkl/2017.0.1
+#module load mkl/2017.0.1
 
 ulimit -s unlimited
 module list
@@ -38,7 +38,7 @@ echo "Running daxpy executable"
 echo ""
 for i in `seq 1 20`;
 do
-   /usr/bin/time -f "\t%E real,\t%U user,\t%S sys" mpiexec_mpt -n 36 ./daxpy
+   mpiexec -n 36 ./daxpy
 done
 echo ""
 #source /glade/u/home/gdicker/scripts/restorePaths.sh
