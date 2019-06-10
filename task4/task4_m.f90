@@ -2,8 +2,8 @@ module task4_m
 implicit none
 include 'mpif.h'
 
-external PSGETRF
-external PSGETRI
+external SGETRF
+external SGETRI
 
 CONTAINS
     subroutine daxpy(X, Y, Z, alpha, taskid, numTasks)
