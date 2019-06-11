@@ -9,7 +9,7 @@ endif
 D_LOC=$(NCAR_HOST)
 endif
 
-OBJ = task4.o task4_m.o
+OBJ = task4.o task4_m.o openacc_m.o
 COMP = mpif90
 PROG = daxpy
 INCL =
@@ -23,20 +23,27 @@ LIBS = -lmkl_blacs_intelmpi_ilp64 -lmkl_scalapack_ilp64 -lmkl_intel_ilp64 \
 LIBS = -llapack -lblas
 WARNS = 
 CHECKS =
+INFO = -Minfo=accel -Mneginfo
 OPT = 
-OPT = -O3 -mp
+OPT = -O3 -acc -mp -Mpreprocess
 
 $(PROG): $(OBJ)
-	$(COMP) $(CHECKS) $(WARNS) $(OPT) -o $(PROG) $(OBJ) $(INCL) $(LIB) $(LIBS)
+	$(COMP) $(CHECKS) $(WARNS) $(INFO) $(OPT) -o $(PROG) $(OBJ) $(INCL) $(LIB) $(LIBS)
 
 task4_m.mod: task4_m.f90 task4_m.o
-	$(COMP) $(CHECKS) $(WARNS) $(OPT) -c task4_m.f90 $(INCL) $(LIB) $(LIBS) 
+	$(COMP) $(CHECKS) $(WARNS) $(INFO) $(OPT) -c task4_m.f90 $(INCL) $(LIB) $(LIBS) 
 
 task4_m.o: task4_m.f90
-	$(COMP) $(CHECKS) $(WARNS) $(OPT) -c task4_m.f90 $(INCL) $(LIB) $(LIBS) 
+	$(COMP) $(CHECKS) $(WARNS) $(INFO) $(OPT) -c task4_m.f90 $(INCL) $(LIB) $(LIBS) 
 
 task4.o: task4.f90 task4_m.mod
-	$(COMP) $(CHECKS) $(WARNS) $(OPT) -c task4.f90 $(INCL) $(LIB) $(LIBS) 
+	$(COMP) $(CHECKS) $(WARNS) $(INFO) $(OPT) -c task4.f90 $(INCL) $(LIB) $(LIBS) 
+
+openacc_m.mod: openacc_m.mod openacc_m.o
+	$(COMP) $(CHECKS) $(WARNS) $(INFO) $(OPT) -c openacc_m.f90 $(INCL) $(LIB) $(LIBS)
+
+openacc_m.o: openacc_m.f90
+	$(COMP) $(CHECKS) $(WARNS) $(INFO) $(OPT) -c openacc_m.f90 $(INCL) $(LIB) $(LIBS)
 
 clean:
 	rm -f *.o *.mod

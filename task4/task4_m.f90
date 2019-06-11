@@ -60,9 +60,17 @@ CONTAINS
            call MPI_RECV(X, cols*N, MPI_REAL, 0, 1, MPI_COMM_WORLD, status, ierr)
            call MPI_RECV(Y, cols*N, MPI_REAL, 0, 1, MPI_COMM_WORLD, status, ierr)
 
+           ! Data region
+           !$acc data         &
+           !$acc copyin(X, Y) &
+           !$acc copyout(Z)
+
            ! Do the computation
            !print *, "worker", taskid, "doing computation"
+           !$acc kernels
            Z = alpha*X + Y
+           !$acc end kernels
+           !$acc end data
 
            ! ! Send result back to the master
            !print *, "worker", taskid, "sending results to master"

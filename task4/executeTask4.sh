@@ -36,7 +36,7 @@ make
 
 echo "Running daxpy executable"
 echo ""
-for i in `seq 1 20`;
+for i in `seq 1 1`;
 do
    mpiexec -n 36 ./daxpy
 done
