@@ -38,7 +38,7 @@ echo "Running daxpy executable"
 echo ""
 for i in `seq 1 1`;
 do
-   /usr/bin/time -f "\t%E real,\t%U user,\t%S sys" mpirun -n 36 ./daxpy
+   mpirun -n 36 ./daxpy
 done
 echo ""
 #source /glade/u/home/gdicker/scripts/restorePaths.sh
