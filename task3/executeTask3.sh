@@ -18,11 +18,11 @@ module save D_PREV_MODS
 
 module purge
 module load ncarenv/1.2
-module load intel/17.0.1
-module load mpt/2.19
+module load pgi/17.10
+module load openmpi/3.1.2
 module load ncarcompilers/0.4.1
 module load netcdf-mpi/4.6.1
-module load mkl/2017.0.1
+#module load mkl/2017.0.1
 
 ulimit -s unlimited
 module list
@@ -36,9 +36,9 @@ make
 
 echo "Running daxpy executable"
 echo ""
-for i in `seq 1 20`;
+for i in `seq 1 1`;
 do
-   /usr/bin/time -f "\t%E real,\t%U user,\t%S sys" mpiexec_mpt -n 36 ./daxpy
+   /usr/bin/time -f "\t%E real,\t%U user,\t%S sys" mpirun -n 36 ./daxpy
 done
 echo ""
 #source /glade/u/home/gdicker/scripts/restorePaths.sh
