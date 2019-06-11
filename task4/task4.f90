@@ -27,7 +27,7 @@ PROGRAM task4
 
     if (rank .EQ. 0) then
      ! call getarg(i, arg)
-      write(*, '(A, I1, A, I1)') "Matrices are size ", N 
+      write(*, *) "Matrices are size ", N 
       call CPU_TIME(start)
       do 10 i=1, N
         do 20 j=1, N
