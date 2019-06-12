@@ -25,22 +25,16 @@ WARNS =
 CHECKS =
 INFO = -Minfo=accel -Mneginfo
 OPT = 
-OPT = -O3 -acc -mp -Mpreprocess
+OPT = -fpic -O3 -acc -Mpreprocess -pgf90libs -Mcache_align -Mconcur -Minline
 
 $(PROG): $(OBJ)
 	$(COMP) $(CHECKS) $(WARNS) $(INFO) $(OPT) -o $(PROG) $(OBJ) $(INCL) $(LIB) $(LIBS)
 
-task4_m.mod: task4_m.f90 task4_m.o
-	$(COMP) $(CHECKS) $(WARNS) $(INFO) $(OPT) -c task4_m.f90 $(INCL) $(LIB) $(LIBS) 
-
 task4_m.o: task4_m.f90
 	$(COMP) $(CHECKS) $(WARNS) $(INFO) $(OPT) -c task4_m.f90 $(INCL) $(LIB) $(LIBS) 
 
-task4.o: task4.f90 task4_m.mod
+task4.o: task4.f90 task4_m.o
 	$(COMP) $(CHECKS) $(WARNS) $(INFO) $(OPT) -c task4.f90 $(INCL) $(LIB) $(LIBS) 
-
-openacc_m.mod: openacc_m.mod openacc_m.o
-	$(COMP) $(CHECKS) $(WARNS) $(INFO) $(OPT) -c openacc_m.f90 $(INCL) $(LIB) $(LIBS)
 
 openacc_m.o: openacc_m.f90
 	$(COMP) $(CHECKS) $(WARNS) $(INFO) $(OPT) -c openacc_m.f90 $(INCL) $(LIB) $(LIBS)
