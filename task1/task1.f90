@@ -24,27 +24,27 @@ PROGRAM task1
     call CPU_TIME(finish)
     elapInit=finish-start
 
-    write(*, '(A, I1, A, I1)') "Matrices are size ", shape(A)
+    write(*, *) "Matrices are size ", shape(A)
 
     call CPU_TIME(start)
     call daxpy(A, B, C, 0.5)
     call CPU_TIME(finish)
     elapDaxpy=finish-start
 
-    write(*, *) "A="
-    write(*,*) A
-    write(*, *) "B="
-    write(*,*) B
-    write(*, *) "C="
-    write(*,*) C
+    !write(*, *) "A="
+    !write(*,*) A
+    !write(*, *) "B="
+    !write(*,*) B
+    !write(*, *) "C="
+    !write(*,*) C
 
     call CPU_TIME(start)
     Cinv = inv(C)
     call CPU_TIME(finish)
     elapInv=finish-start
 
-    write(*, *) "Cinv="
-    write(*,*) Cinv
+    !write(*, *) "Cinv="
+    !write(*,*) Cinv
 
     print *, 'total time=', elapInv+elapDaxpy+elapInit, &
     ' initilize:', elapInit, &
