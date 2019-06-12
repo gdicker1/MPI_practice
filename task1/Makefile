@@ -8,18 +8,16 @@ INCL =
 LIB =
 #LIB = -L/glade/work/gdicker/opt/lib
 LIBS = -llapack -lblas
+OPT = -fpic -03 -pgf90libs -Mcache_align -Mconcur -Minline
 
 $(PROG): $(OBJ)
-	$(COMP) -o $(PROG) $(OBJ) $(INCL) $(LIB) $(LIBS)
-
-task1_m.mod: task1_m.f90 task1_m.o
-	$(COMP) -c task1_m.f90 $(INCL) $(LIB) $(LIBS)
+	$(COMP) $(OPT) -o $(PROG) $(OBJ) $(INCL) $(LIB) $(LIBS)
 
 task1_m.o: task1_m.f90
-	$(COMP) -c task1_m.f90 $(INCL) $(LIB) $(LIBS)
+	$(COMP) $(OPT) -c task1_m.f90 $(INCL) $(LIB) $(LIBS)
 
-task1.o: task1.f90 task1_m.mod
-	$(COMP) -c task1.f90 $(INCL) $(LIB) $(LIBS)
+task1.o: task1.f90 task1_m.o
+	$(COMP) $(OPT) -c task1.f90 $(INCL) $(LIB) $(LIBS)
 
 clean:
 	rm -f *.o *.mod
