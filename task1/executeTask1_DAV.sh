@@ -11,7 +11,7 @@
 #SBATCH --error=task1.err
 
 
-THEDIR=/glade/work/gdicker/MPI_practice/task4
+THEDIR=/glade/work/gdicker/MPI_practice/task1
 FILE=$THEDIR/daxpy
 
 #source /glade/u/home/gdicker/scripts/setPaths.sh
@@ -40,7 +40,7 @@ echo "Running daxpy executable"
 echo ""
 for i in `seq 1 20`;
 do
-   mpiexec -x PGI_ACC_TIME=1  -n 72 ./daxpy
+  ./daxpy
 done
 echo ""
 #source /glade/u/home/gdicker/scripts/restorePaths.sh
