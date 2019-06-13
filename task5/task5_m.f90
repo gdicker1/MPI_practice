@@ -1,9 +1,9 @@
-module task4_m
+module task5_m
 implicit none
 include 'mpif.h'
 
-external PSGETRF
-external PSGETRI
+externaL SGETRF
+external SGETRI
 
 CONTAINS
     subroutine daxpy(X, Y, Z, alpha, taskid, numTasks)
@@ -71,7 +71,7 @@ CONTAINS
         Z = reshape(Zflat, shape)
 
         ! Deallocate arrays
-        deallocate(Xflat, Yflat, Zflat)
+        deallocate(Xpart, Ypart, Zpart)
 
     end subroutine daxpy
 
@@ -95,12 +95,12 @@ CONTAINS
         n = size(X,1)
         ! Decompose Xinv into a Lower-Upper Matrix
         !  Needs to be done for SGETRI
-        call PSGETRF(n, n, Xinv, n, ipiv, info)
+        call SGETRF(n, n, Xinv, n, ipiv, info)
         if (info.ne.0) stop 'Matrix is singular'
 
-        call PSGETRI(n, Xinv, n, ipiv, work, n, info)
+        call SGETRI(n, Xinv, n, ipiv, work, n, info)
         if (info.ne.0) stop 'Matrix inversion failed'
     end function inv
 
-end module task4_m
+end module task5_m
 
