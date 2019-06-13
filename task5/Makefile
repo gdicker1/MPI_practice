@@ -20,12 +20,12 @@ LIB =
 #LIB = -L/glade/work/gdicker/opt/lib
 LIBS = -lmkl_blacs_intelmpi_ilp64 -lmkl_scalapack_ilp64 -lmkl_intel_ilp64 \
        -lmkl_intel_thread -lmkl_core -lmkl_blacs_intelmpi_ilp64 -liomp5 -lpthread -lm -ldl
-LIBS = -llapack -lblas
+LIBS = -lscalapack -lblas
 WARNS = 
 CHECKS =
 INFO = -Minfo=accel -Mneginfo
 OPT = 
-OPT = -fpic -O3 -acc -Mpreprocess -pgf90libs -Mcache_align -Mconcur -Minline
+OPT = -fpic -O3 -acc -Mpreprocess -pgf90libs -Mcache_align -Mconcur -Minline -Mscalapack
 
 $(PROG): $(OBJ)
 	$(COMP) $(CHECKS) $(WARNS) $(INFO) $(OPT) -o $(PROG) $(OBJ) $(INCL) $(LIB) $(LIBS)

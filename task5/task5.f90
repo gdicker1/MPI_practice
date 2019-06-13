@@ -3,7 +3,7 @@ PROGRAM task4
     IMPLICIT NONE
 
     INTEGER, PARAMETER :: N = 30
-    integer i, j, numtasks, rank, ierr
+    integer i, j, numtasks, rank, ierr, devNum
     REAL :: alph = 0.5
     REAL, DIMENSION(N, N):: A
     REAL, DIMENSION(N, N) :: B
@@ -24,6 +24,11 @@ PROGRAM task4
       end if
       GOTO 99
     end if
+
+    ! Define the GPU affinity for each task
+    #ifdef _ACCEL
+      devNum = setDevice(numtasks, rank)
+    #endif !ACCEL
 
     if (rank .EQ. 0) then
      ! call getarg(i, arg)
@@ -46,7 +51,7 @@ PROGRAM task4
     !print *, 'Number of tasks= ',numtasks,' My rank=',rank
 
     call CPU_TIME(start)
-    call daxpy(A, B, C, alph, rank, min(N+1, numtasks))
+    call daxpy(A, B, C, alph, rank, numtasks)
     call CPU_TIME(finish)
     elapDaxpy = finish-start
 
