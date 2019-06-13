@@ -3,7 +3,7 @@ PROGRAM task4
     IMPLICIT NONE
 
     INTEGER, PARAMETER :: N = 30
-    integer i, j, numtasks, rank, ierr, devNum
+    integer i, j, numtasks, rank, ierr, devNum, setDevice
     REAL :: alph = 0.5
     REAL, DIMENSION(N, N):: A
     REAL, DIMENSION(N, N) :: B
