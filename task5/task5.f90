@@ -1,5 +1,5 @@
-PROGRAM task4
-    use task4_m
+PROGRAM task5
+    use task5_m
     IMPLICIT NONE
 
     INTEGER, PARAMETER :: N = 30
@@ -76,4 +76,4 @@ PROGRAM task4
 
 99  call MPI_FINALIZE(ierr)
 
-END PROGRAM task4
+END PROGRAM task5
