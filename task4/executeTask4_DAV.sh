@@ -15,35 +15,16 @@
 THEDIR=/glade/work/gdicker/MPI_practice/task4
 FILE=$THEDIR/daxpy
 
-#source /glade/u/home/gdicker/scripts/setPaths.sh
+# Ensure that the correct modules can be found
+source /glade/u/home/gdicker/scripts/module.sh
 
-module save D_PREV_MODS
-
+# Clean environment and then load modules as needed
 module purge
+module load PrgEnv/PGI+OpenMPI/2019-04-30
 module load ncarenv/1.2
-module load pgi/17.10
-module load openmpi/3.1.2
-module load ncarcompilers/0.4.1
-module load netcdf-mpi/4.6.1
-#module load mkl/2017.0.1
-
-ulimit -s unlimited
-module list
+module load cuda/10.1.105.0
+module load openmpi/3.1.4
 
 cd $THEDIR
 
-make cleanall
-make
-
-#source /glade/u/home/gdicker/scripts/restorePaths.sh
-
-echo "Running daxpy executable"
-echo ""
-for i in `seq 1 1`;
-do
-   mpiexec -x PGI_ACC_TIME=1  -n 72 ./daxpy
-done
-echo ""
-#source /glade/u/home/gdicker/scripts/restorePaths.sh
-
-module restore D_PREV_MODS
+mpirun -x PGI_ACC_TIME=1  -n 72 ./daxpy

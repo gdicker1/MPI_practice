@@ -8,11 +8,11 @@
 #SBATCH --ntasks-per-node=36
 #SBATCH --gpus=1
 #SBATCH --partition=dav
-#SBATCH --output=task5.out
-#SBATCH --error=task5.err
+#SBATCH --output=task2.out
+#SBATCH --error=task2.err
 
 
-THEDIR=/glade/work/gdicker/MPI_practice/task5
+THEDIR=/glade/work/gdicker/MPI_practice/task2
 FILE=$THEDIR/daxpy
 
 # Ensure that the correct modules can be found

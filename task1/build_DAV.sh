@@ -8,12 +8,10 @@
 #SBATCH --ntasks-per-node=36
 #SBATCH --gpus=1
 #SBATCH --partition=dav
-#SBATCH --output=task5.out
-#SBATCH --error=task5.err
+#SBATCH --output=task4.out
+#SBATCH --error=task4.err
 
-
-THEDIR=/glade/work/gdicker/MPI_practice/task5
-FILE=$THEDIR/daxpy
+THEDIR=/glade/work/gdicker/MPI_practice/task1
 
 # Ensure that the correct modules can be found
 source /glade/u/home/gdicker/scripts/module.sh
@@ -25,6 +23,9 @@ module load ncarenv/1.2
 module load cuda/10.1.105.0
 module load openmpi/3.1.4
 
+# Move to the directory
 cd $THEDIR
 
-mpirun -x PGI_ACC_TIME=1  -n 72 ./daxpy
+# Build
+make cleanall
+make
