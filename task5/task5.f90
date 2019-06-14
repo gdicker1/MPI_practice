@@ -18,13 +18,6 @@ PROGRAM task5
     !print *, "Calling MPI_COMM_SIZE"
     call MPI_COMM_SIZE(MPI_COMM_WORLD, numtasks, ierr)
 
-    if(numTasks-1 .LT. N) then
-      if(rank .EQ. 0) then
-        print *, "ERROR:Need at least ", N, "workers and 1 master. There are ", numTasks, " tasks available"
-      end if
-      GOTO 99
-    end if
-
     ! Define the GPU affinity for each task
     #ifdef _ACCEL
       devNum = setDevice(numtasks, rank)

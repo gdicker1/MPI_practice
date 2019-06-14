@@ -26,7 +26,7 @@ WARNS =
 CHECKS =
 INFO = -Minfo=accel -Mneginfo
 OPT = 
-OPT = -fpic -O3 -acc -Mpreprocess -pgf90libs -Mcache_align -Mconcur -Minline
+OPT = -fpic -O3 -acc -ta=tesla:cc70 -Mpreprocess -pgf90libs -Mcache_align -Mconcur -Minline
 
 $(PROG): $(OBJ)
 	$(COMP) $(CHECKS) $(WARNS) $(INFO) $(OPT) -o $(PROG) $(OBJ) $(INCL) $(LIB) $(LIBS)
