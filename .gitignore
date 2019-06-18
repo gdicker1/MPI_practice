@@ -1,5 +1,7 @@
 *.o
 *.mod
 *.nvprof
+*.err
+*.out
 .DS_STORE
 
