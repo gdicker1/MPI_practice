@@ -6,7 +6,7 @@
 #SBATCH --account NTDD0002
 #SBATCH --ntasks=72
 #SBATCH --ntasks-per-node=36
-#SBATCH --gpus=1
+#SBATCH --gres=gpu:v100:1
 #SBATCH --partition=dav
 #SBATCH --output=task4.out
 #SBATCH --error=task4.err
@@ -22,9 +22,13 @@ source /glade/u/home/gdicker/scripts/module.sh
 module purge
 module load PrgEnv/PGI+OpenMPI/2019-04-30
 module load ncarenv/1.2
+module load pgi/19.4
 module load cuda/10.1.105.0
 module load openmpi/3.1.4
+module load pio/2_4_2
+module list
 
 cd $THEDIR
+export OMPI_MCA_btl_openib_if_include=mlx5_0
 
-mpirun -x PGI_ACC_TIME=1  -n 72 ./daxpy
+mpirun -x PGI_ACC_TIME=0  -n 72 ./daxpy

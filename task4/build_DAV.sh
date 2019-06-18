@@ -20,8 +20,11 @@ source /glade/u/home/gdicker/scripts/module.sh
 module purge
 module load PrgEnv/PGI+OpenMPI/2019-04-30
 module load ncarenv/1.2
+module load pgi/19.4
 module load cuda/10.1.105.0
 module load openmpi/3.1.4
+module load pio/2_4_2
+module list
 
 # Move to the directory
 cd $THEDIR
