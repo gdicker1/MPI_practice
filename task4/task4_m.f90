@@ -12,9 +12,10 @@ CONTAINS
         real, dimension(:,:), intent(in) :: Y
         real, intent(in) :: alpha
         real, dimension(size(X, 1), size(X, 2)), intent(out):: Z
+        real, dimension(size(X, 1)*size(X, 2)) :: Xflat, Yflat, Zflat
         real, dimension(:), allocatable :: Xpart, Ypart, Zpart
         integer, intent(in) :: taskid, numTasks
-        integer i, ierr, N, cols, offset, numWorkers, dest, source
+        integer i, ierr, numWorkers, N, numPerWorker, offset, dest, source
         integer, parameter ::  master=0
         integer status(MPI_STATUS_SIZE)
         integer Rstats(MPI_STATUS_SIZE, numTasks), Sstats(MPI_STATUS_SIZE, numTasks)
@@ -32,24 +33,28 @@ CONTAINS
 
         numWorkers = numTasks - 1
         N = size(X,1)
-        cols = N / numWorkers
-        allocate(Xpart(N*cols))
-        allocate(Ypart(N*cols))
-        allocate(Zpart(N*cols))
+        numPerWorker = N*N / numWorkers
+        Xflat = PACK(X, .true.)
+        Yflat = PACK(Y, .true.)
+        allocate(Xpart(numPerWorker), Ypart(numPerWorker), Zpart(numPerWorker))
         offset = 1
+        
         !print *, "in daxpy taskid=", taskid
         ! If master task
         if (taskid .EQ. master) then
-            !print *, "numworkers=", numWorkers, " cols=", cols, " offset=", offset
+            !print *, "numworkers=", numWorkers, " numPerWorker=", numPerWorker, " &
+            !offset=", offset
+            !print *, Xflat
+            !print *, Yflat
             ! Split up the matrix for each worker           
             do 30 dest=1, numWorkers
                 !print *, "sending data to worker ", dest
-                call MPI_ISEND(X(1, offset), N*cols, MPI_REAL, dest, 1, &
+                call MPI_ISEND(Xflat(offset), numPerWorker, MPI_REAL, dest, 1, &
                                MPI_COMM_WORLD, Srequests(dest), ierr)
-                call MPI_ISEND(Y(1, offset), N*cols, MPI_REAL, dest, 2, & 
+                call MPI_ISEND(Yflat(offset), numPerWorker, MPI_REAL, dest, 2, & 
                                MPI_COMM_WORLD, Srequests(dest), ierr)
                 offsets(dest) = offset
-                offset = offset + cols
+                offset = offset + numPerWorker
             30 continue
             call MPI_WAITALL(numWorkers, Srequests, Sstats, ierr)
             
@@ -57,20 +62,25 @@ CONTAINS
             ! Recieve the results from each worker into the Z matrix
             do 40 source=1, numWorkers
                 !print *, "recieving data from worker", source
-                call MPI_IRECV(Z(1, offsets(source)), cols*N, MPI_REAL, source, 3, MPI_COMM_WORLD, &
+                call MPI_IRECV(Zflat(offsets(source)), numPerWorker, MPI_REAL, source, 3, MPI_COMM_WORLD, &
                                Rrequests(source), ierr)
             40 continue
             call MPI_WAITALL(numWorkers, Rrequests, Rstats, ierr)
             !call CPU_TIME(finish)
             !elapRecv = finish - start
             !print *, "Recieving took ", elapRecv
+            Z = RESHAPE(Zflat, (/ N, N /))
+            !print *, 'Zflat', Zflat
+            !print *, 'Z', Zflat
+
         ! worker task
         else if (taskid .LE. N) then
            ! Recieve the data from the master
            !print *, "worker", taskid, "reciving from master"
-           call MPI_RECV(Xpart, cols*N, MPI_REAL, master, 1, MPI_COMM_WORLD, status, ierr)
-           call MPI_RECV(Ypart, cols*N, MPI_REAL, master, 2, MPI_COMM_WORLD, status, ierr)
-
+           call MPI_RECV(Xpart, numPerWorker, MPI_REAL, master, 1, MPI_COMM_WORLD, status, ierr)
+           call MPI_RECV(Ypart, numPerWorker, MPI_REAL, master, 2, MPI_COMM_WORLD, status, ierr)
+           !print *, "task:", taskId, " Xpart", Xpart
+           !print *, "task:", taskId, " Ypart", Ypart
            ! Data region
            !$acc enter data         &
            !$acc copyin(Xpart(:), Ypart(:), alpha) &
@@ -83,11 +93,12 @@ CONTAINS
             Zpart(i) = alpha*Xpart(i) + Ypart(i)
            enddo
            !$acc end kernels
-           !$acc exit data delete(Xpart(:), Ypart(:), alpha) copyout(Zpart(:))
+           !$acc exit data delete(Xpart(:), Ypart(:), alpha) &
+           !$acc copyout(Zpart(:))
 
            ! ! Send result back to the master
            !print *, "worker", taskid, "sending results to master, Z", Zpart
-           call MPI_ISEND(Zpart, cols*N, MPI_REAL, master, 3, MPI_COMM_WORLD, Srequests(taskid), ierr)
+           call MPI_ISEND(Zpart, numPerWorker, MPI_REAL, master, 3, MPI_COMM_WORLD, Srequests(taskid), ierr)
         else
            ! Do nothing
            ! print *, "Worker", taskid, "doing nothing"
