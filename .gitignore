@@ -1,3 +1,5 @@
 *.o
 *.mod
+*.nvprof
 .DS_STORE
+
